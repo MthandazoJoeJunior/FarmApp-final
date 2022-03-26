@@ -3,6 +3,7 @@ import 'package:flutter_svg/svg.dart';
 import 'package:plant_app/screens/region3/components3/body.dart';
 
 class Region3 extends StatelessWidget {
+  static const String id = 'region3';
   @override
   Widget build(BuildContext context) {
     return Scaffold(

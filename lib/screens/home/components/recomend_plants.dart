@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:plant_app/plant%20_screens/maize_screen.dart';
+import 'package:plant_app/plant _screens/maize_screen.dart';
 //import 'package:plant_app/screens/details/details_screen.dart';
 
 import '../../../constants.dart';
@@ -17,7 +19,9 @@ class RecomendsPlants extends StatelessWidget {
           RecomendPlantCard(
             image: "assets/images/image_1.png",
             title: "Maize",
-
+            press: () {
+              _maize_screen(context);
+            },
 
           ),
           RecomendPlantCard(
@@ -29,11 +33,15 @@ class RecomendsPlants extends StatelessWidget {
           RecomendPlantCard(
             image: "assets/images/image_3.png",
             title: "Peas",
-            press: () {},
+            press: () {
+            },
           ),
         ],
       ),
     );
+  }
+  _maize_screen(context) async {
+    Navigator.pushReplacementNamed(context, MaizeScreen.id);
   }
 }
 
@@ -99,4 +107,5 @@ class RecomendPlantCard extends StatelessWidget {
       ),
     );
   }
+
 }

@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:plant_app/constants.dart';
 import 'package:plant_app/plant%20_screens/maize_screen.dart';
 import 'package:plant_app/screens/home/home_screen.dart';
+import 'package:plant_app/screens/region2/region2.dart';
 import 'package:plant_app/select_region/selectRegion.dart';
 import 'package:plant_app/screens/region3/region3.dart';
 
@@ -30,9 +31,14 @@ class MyApp extends StatelessWidget {
 
       initialRoute: FormPage.id,
       routes: {
-        MaizeScreen.id: (context) => const MaizeScreen(),
+        MaizeScreen.id: (context) => MaizeScreen(),
         FormPage.id: (context) => FormPage(title: "title"),
         HomeScreen.id: (context) => HomeScreen(),
+        Region2.id: (context) => Region2(),
+        Region3.id: (context) => Region3(),
+        Region4.id: (context) => Region4(),
+        Region5.id: (context) => Region5(),
+
 
       },
     );
