@@ -1,6 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:plant_app/constants.dart';
+import 'package:plant_app/plant%20_screens/groundnuts_screen.dart';
 import 'package:plant_app/plant%20_screens/maize_screen.dart';
+import 'package:plant_app/plant%20_screens/millet_screen.dart';
+import 'package:plant_app/plant%20_screens/peas_screen.dart';
+import 'package:plant_app/plant%20_screens/potatoes_screen.dart';
+import 'package:plant_app/plant%20_screens/sorghum_screen.dart';
+import 'package:plant_app/plant%20_screens/soyabeans_screen.dart';
+import 'package:plant_app/plant%20_screens/sugarbeans_screen.dart';
+import 'package:plant_app/plant%20_screens/sunflower_screen.dart';
+import 'package:plant_app/plant%20_screens/wheat_screen.dart';
 import 'package:plant_app/screens/home/home_screen.dart';
 import 'package:plant_app/screens/region2/region2.dart';
 import 'package:plant_app/select_region/selectRegion.dart';
@@ -38,6 +47,15 @@ class MyApp extends StatelessWidget {
         Region3.id: (context) => Region3(),
         Region4.id: (context) => Region4(),
         Region5.id: (context) => Region5(),
+        GroundnutsScreen.id: (context) => GroundnutsScreen(),
+        MilletScreen.id: (context) => MilletScreen(),
+        PeasScreen.id: (context) => PeasScreen(),
+        PotatoesScreen.id: (context) => PotatoesScreen(),
+        SorghumScreen.id: (context) => SorghumScreen(),
+        SoyabeansScreen.id: (context) => SoyabeansScreen(),
+        SugarBeansScreen.id: (context) => SugarBeansScreen(),
+        SunflowerScreen.id: (context) => SunflowerScreen(),
+        WheatScreen.id: (context) => WheatScreen(),
 
 
       },

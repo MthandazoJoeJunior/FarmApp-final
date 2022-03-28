@@ -1,4 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:plant_app/plant _screens/maize_screen.dart';
+import 'package:plant_app/plant _screens/wheat_screen.dart';
+import 'package:plant_app/plant _screens/groundnuts_screen.dart';
+import 'package:plant_app/plant _screens/sunflower_screen.dart';
+import 'package:plant_app/plant _screens/soyabeans_screen.dart';
 //import 'package:plant_app/screens/details/details_screen.dart';
 
 import '../../../constants.dart';
@@ -18,23 +23,41 @@ class RecomendsPlants extends StatelessWidget {
           RecomendPlantCard(
             image: "assets/images/image_1.png",
             title: "Maize",
-
-
+            press: () {
+              _maize_screen(context);
+            },
           ),
+
           RecomendPlantCard(
             image: "assets/images/groundnuts.jpg",
             title: "Groundnuts",
+            press: () {
+              _groundnuts_screen(context);
+            },
 
           ),
 
           RecomendPlantCard(
             image: "assets/images/sunflower.jpg",
             title: "  SunFlower",
-            press: () {},
+            press: () {
+              _sunflower_screen(context);
+            },
           ),
         ],
       ),
     );
+  }
+  _maize_screen(context) async {
+    Navigator.pushReplacementNamed(context, MaizeScreen.id);
+  }
+
+  _sunflower_screen(context) async {
+    Navigator.pushReplacementNamed(context, SunflowerScreen.id);
+  }
+
+  _groundnuts_screen(context) async {
+    Navigator.pushReplacementNamed(context, GroundnutsScreen.id);
   }
 }
 

@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:plant_app/plant%20_screens/maize_screen.dart';
 import 'package:plant_app/plant _screens/maize_screen.dart';
+import 'package:plant_app/plant%20_screens/potatoes_screen.dart';
+import 'package:plant_app/plant _screens/potatoes_screen.dart';
+import 'package:plant_app/plant _screens/peas_screen.dart';
 //import 'package:plant_app/screens/details/details_screen.dart';
 
 import '../../../constants.dart';
@@ -27,13 +30,16 @@ class RecomendsPlants extends StatelessWidget {
           RecomendPlantCard(
             image: "assets/images/image_2.png",
             title: "Potatoes",
-
+            press: () {
+              _potatoes_screen(context);
+            },
 
           ),
           RecomendPlantCard(
             image: "assets/images/image_3.png",
             title: "Peas",
             press: () {
+              _peas_screen(context);
             },
           ),
         ],
@@ -42,6 +48,14 @@ class RecomendsPlants extends StatelessWidget {
   }
   _maize_screen(context) async {
     Navigator.pushReplacementNamed(context, MaizeScreen.id);
+  }
+
+  _potatoes_screen(context) async {
+    Navigator.pushReplacementNamed(context, PotatoesScreen.id);
+  }
+
+  _peas_screen(context) async {
+    Navigator.pushReplacementNamed(context, PeasScreen.id);
   }
 }
 
