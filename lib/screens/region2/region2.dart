@@ -7,7 +7,7 @@ class Region2 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: buildAppBar(),
+      appBar: AppBar(backgroundColor: Colors.green),
       body: Body(),
     );
   }

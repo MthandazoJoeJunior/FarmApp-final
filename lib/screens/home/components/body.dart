@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:plant_app/constants.dart';
+import 'package:plant_app/select_region/selectRegion.dart';
 
 import 'header_with_seachbox.dart';
 import 'recomend_plants.dart';
@@ -12,15 +13,29 @@ class Body extends StatelessWidget {
     Size size = MediaQuery.of(context).size;
     // it enable scrolling on small device
     return SingleChildScrollView(
-      child: Column(
+      child:
+      Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: <Widget>[
           HeaderWithSearchBox(size: size),
           TitleWithMoreBtn(title: "Recomended", press: () {}),
           RecomendsPlants(),
           SizedBox(height: kDefaultPadding),
+          Center(
+            child: ElevatedButton(
+              style: ElevatedButton.styleFrom(primary: Colors.green),
+              child: const Text('Back'),
+              onPressed: () =>{
+                _selectRegion(context)
+              },
+            ),
+          ),
         ],
       ),
+
     );
+  }
+  _selectRegion(context) async {
+    Navigator.pushReplacementNamed(context, FormPage.id);
   }
 }

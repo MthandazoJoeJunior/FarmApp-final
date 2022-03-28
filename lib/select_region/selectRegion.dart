@@ -1,5 +1,6 @@
 import 'dart:developer';
 
+
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_fast_forms/flutter_fast_forms.dart';
@@ -18,14 +19,32 @@ class FormPage extends StatelessWidget {
   final formKey = GlobalKey<FormState>();
   final String title;
 
+  Future<bool> _onWillPop(context) async {
+    return (await showDialog(
+       context: context,
+      builder: (context) =>
+      new AlertDialog(
+        title: new Text('Are you sure?'),
+        content: new Text('Do you want to exit Murimi'),
+        actions: <Widget>[
+          TextButton(
+            onPressed: () => Navigator.of(context).pop(false),
+            child: new Text('No'),
+          ),
+          TextButton(
+            onPressed: () => Navigator.of(context).pop(true),
+            child: new Text('Yes'),
+          ),
+        ],
+      ),
+    )) ?? false;
+  }
+
   @override
   Widget build(BuildContext context) {
-    switch (Theme.of(context).platform) {
-      case TargetPlatform.iOS:
-
-      case TargetPlatform.android:
-      default:
-        return Scaffold(
+    return new WillPopScope(
+        onWillPop:() => _onWillPop(context),
+        child: new Scaffold(
           appBar: AppBar(
               backgroundColor: Colors.green,
               title: const Text(
@@ -36,6 +55,8 @@ class FormPage extends StatelessWidget {
                 ),
               )),
           body: SafeArea(
+            // return new WillPopScope(
+            //    onWillPop: _onWillPop,
             child: SingleChildScrollView(
               child: Column(
                 children: [
@@ -94,7 +115,7 @@ class FormPage extends StatelessWidget {
               ),
             ),
           ),
-        );
+        ));
     }
   }
 
@@ -142,6 +163,7 @@ class FormPage extends StatelessWidget {
             initialValue: 'My Region',
           ),
         ],
+
       ),
     ];
   }
@@ -166,4 +188,4 @@ class FormPage extends StatelessWidget {
     Navigator.pushReplacementNamed(context, Region5.id);
   }
 
-}
+

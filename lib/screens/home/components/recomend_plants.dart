@@ -4,6 +4,7 @@ import 'package:plant_app/plant _screens/maize_screen.dart';
 import 'package:plant_app/plant%20_screens/potatoes_screen.dart';
 import 'package:plant_app/plant _screens/potatoes_screen.dart';
 import 'package:plant_app/plant _screens/peas_screen.dart';
+import 'package:plant_app/select_region/selectRegion.dart';
 //import 'package:plant_app/screens/details/details_screen.dart';
 
 import '../../../constants.dart';
@@ -57,6 +58,7 @@ class RecomendsPlants extends StatelessWidget {
   _peas_screen(context) async {
     Navigator.pushReplacementNamed(context, PeasScreen.id);
   }
+
 }
 
 class RecomendPlantCard extends StatelessWidget {
