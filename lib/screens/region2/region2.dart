@@ -4,10 +4,21 @@ import 'package:plant_app/screens/region2/components2/body.dart';
 
 class Region2 extends StatelessWidget {
   static const String id = 'region2';
+  static const String _title = 'Farm Easy';
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(backgroundColor: Colors.green),
+      appBar: AppBar(
+          backgroundColor: Colors.green,
+          title: const Text(
+            _title,
+            style: TextStyle(
+              fontSize: 22,
+              fontWeight: FontWeight.bold,
+            ),
+          )
+      ),
       body: Body(),
     );
   }
