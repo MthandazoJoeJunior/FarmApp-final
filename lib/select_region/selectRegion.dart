@@ -13,7 +13,7 @@ import 'package:plant_app/screens/region5/region5.dart';
 class FormPage extends StatelessWidget {
   FormPage({Key key,  this.title}) : super(key: key);
   static const String id = 'regionSelection';
-  static const String _title = 'Farm Easy';
+  static const String _title = 'Easy Farm';
   String region_value = '';
 
   final formKey = GlobalKey<FormState>();

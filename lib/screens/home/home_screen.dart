@@ -4,7 +4,7 @@ import 'package:plant_app/screens/home/components/body.dart';
 
 class HomeScreen extends StatelessWidget {
   static const String id = 'region_1';
-  static const String _title = 'Farm Easy';
+  static const String _title = 'Easy Farm';
 
   @override
   Widget build(BuildContext context) {
