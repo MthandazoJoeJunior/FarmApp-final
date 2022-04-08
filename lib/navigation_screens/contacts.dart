@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:plant_app/select_region/selectRegion.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class Contacts extends StatefulWidget {
   static const String id = 'contacts';
@@ -31,6 +32,14 @@ class _ContactsState extends State<Contacts> {
           ),
         ), body: const ContactDetails(),
     );
+  }
+}
+_sendingMails() async {
+  const url = 'mailto:mthandazojj@gmail.com';
+  if (await canLaunch(url)) {
+    await launch(url);
+  } else {
+    throw 'Could not launch $url';
   }
 }
 
@@ -72,6 +81,10 @@ class _ContactsState extends State<Contacts> {
         ),
         ListTile(
           leading: Icon(Icons.email),
+          onTap: () {
+            _sendingMails();
+            // Navigator.pop(context);
+          },
           title: const Text(
             'Email Us',
             style:  TextStyle(
