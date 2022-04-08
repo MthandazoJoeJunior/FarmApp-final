@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:plant_app/constants.dart';
+import 'package:plant_app/navigation_screens/contacts.dart';
+import 'package:plant_app/navigation_screens/help_support.dart';
 import 'package:plant_app/plant%20_screens/groundnuts_screen.dart';
 import 'package:plant_app/plant%20_screens/maize_screen.dart';
 import 'package:plant_app/plant%20_screens/millet_screen.dart';
@@ -56,6 +58,8 @@ class MyApp extends StatelessWidget {
         SugarBeansScreen.id: (context) => SugarBeansScreen(),
         SunflowerScreen.id: (context) => SunflowerScreen(),
         WheatScreen.id: (context) => WheatScreen(),
+        Contacts.id: (context) => Contacts(),
+        HelpSupport.id: (context) => HelpSupport(),
 
 
       },

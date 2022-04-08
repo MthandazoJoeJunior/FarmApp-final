@@ -9,6 +9,8 @@ import 'package:plant_app/screens/region2/region2.dart';
 import 'package:plant_app/screens/region3/region3.dart';
 import 'package:plant_app/screens/region4/region4.dart';
 import 'package:plant_app/screens/region5/region5.dart';
+import 'package:plant_app/navigation_screens/contacts.dart';
+import 'package:plant_app/navigation_screens/help_support.dart';
 
 class FormPage extends StatelessWidget {
   FormPage({Key key,  this.title}) : super(key: key);
@@ -25,7 +27,7 @@ class FormPage extends StatelessWidget {
       builder: (context) =>
       new AlertDialog(
         title: new Text('Are you sure?'),
-        content: new Text('Do you want to exit Murimi'),
+        content: new Text('Do you want to exit Easy Farm'),
         actions: <Widget>[
           TextButton(
             onPressed: () => Navigator.of(context).pop(false),
@@ -111,8 +113,58 @@ class FormPage extends StatelessWidget {
 
                     },
                   ),
+
                 ],
               ),
+            ),
+          ),
+          drawer: Drawer(
+            child: ListView(
+              // Important: Remove any padding from the ListView.
+              padding: EdgeInsets.zero,
+              children: [
+                SizedBox(
+                  height : 100.0,
+                  child: const DrawerHeader(
+                    decoration: BoxDecoration(
+                      color: Colors.green,
+                    ),
+                    child: Text(
+                      'EASY FARM',
+                      style: TextStyle(
+                      fontSize: 22,
+                      color: Colors.white,
+                      fontWeight: FontWeight.bold,
+                    ),
+                    ),
+                  ),
+                ),
+                ListTile(
+                  title: const Text('Home'),
+                  leading: IconButton(
+                    icon: Icon(Icons.home),),
+                  onTap: () {
+                    Navigator.pop(context);
+                  },
+                ),
+                ListTile(
+                  title: const Text('Contact Us'),
+                  leading: IconButton(
+                    icon: Icon(Icons.contact_phone),),
+                  onTap: () {
+                    _contacts(context);
+                   // Navigator.pop(context);
+                  },
+                ),
+                ListTile(
+                  title: const Text('Help & Support'),
+                  leading: IconButton(
+                    icon: Icon(Icons.contact_support),),
+                  onTap: () {
+                    _help_support(context);
+                  },
+                ),
+              ],
             ),
           ),
         ));
@@ -187,5 +239,9 @@ class FormPage extends StatelessWidget {
   _region5(context) async {
     Navigator.pushReplacementNamed(context, Region5.id);
   }
-
-
+  _contacts(context) async {
+    Navigator.pushReplacementNamed(context, Contacts.id);
+  }
+  _help_support(context) async {
+    Navigator.pushReplacementNamed(context, HelpSupport.id);
+  }
