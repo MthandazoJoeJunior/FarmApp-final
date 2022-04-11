@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:plant_app/select_region/selectRegion.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class HelpSupport extends StatefulWidget {
   static const String id = 'helpsupport';
@@ -32,6 +33,15 @@ class _HelpSupportState extends State<HelpSupport> {
       ),
       body: const HelpSupportDetails(),
     );
+  }
+}
+
+_sendingMails() async {
+  const url = 'mailto:nicolafaith0.com';
+  if (await canLaunch(url)) {
+    await launch(url);
+  } else {
+    throw 'Could not launch $url';
   }
 }
 
@@ -198,7 +208,7 @@ class _HelpSupportDetailsState extends State<HelpSupportDetails> {
                 style: ElevatedButton.styleFrom(primary: Colors.green),
                 child: const Text('Submit'),
                 onPressed: () =>{
-                  _selectRegion(context)
+                  _sendingMails()
                 },
               ),
             ),

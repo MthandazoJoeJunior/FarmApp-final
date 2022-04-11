@@ -35,7 +35,16 @@ class _ContactsState extends State<Contacts> {
   }
 }
 _sendingMails() async {
-  const url = 'mailto:mthandazojj@gmail.com';
+  const url = 'mailto:nicolafaith0@gmail.com';
+  if (await canLaunch(url)) {
+    await launch(url);
+  } else {
+    throw 'Could not launch $url';
+  }
+}
+
+_launchCaller() async {
+  const url = "tel:+263 777 916 312";
   if (await canLaunch(url)) {
     await launch(url);
   } else {
@@ -70,6 +79,10 @@ _sendingMails() async {
         ),
         ListTile(
           leading: Icon(Icons.call),
+          onTap: () {
+            _launchCaller();
+            // Navigator.pop(context);
+          },
           title: const Text(
           'Call Us',
           style:  TextStyle(
