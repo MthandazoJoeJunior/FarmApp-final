@@ -4,6 +4,9 @@ import 'package:plant_app/plant _screens/wheat_screen.dart';
 import 'package:plant_app/plant _screens/groundnuts_screen.dart';
 import 'package:plant_app/plant _screens/sunflower_screen.dart';
 import 'package:plant_app/plant _screens/soyabeans_screen.dart';
+import 'package:plant_app/region_plants/region3/region3_groundnuts.dart';
+import 'package:plant_app/region_plants/region3/region3_maize.dart';
+import 'package:plant_app/region_plants/region3/region3_sunflower.dart';
 //import 'package:plant_app/screens/details/details_screen.dart';
 
 import '../../../constants.dart';
@@ -19,7 +22,6 @@ class RecomendsPlants extends StatelessWidget {
       scrollDirection: Axis.vertical,
       child: Column(
         children: <Widget>[
-
           RecomendPlantCard(
             image: "assets/images/image_1.png",
             title: "Maize",
@@ -27,16 +29,13 @@ class RecomendsPlants extends StatelessWidget {
               _maize_screen(context);
             },
           ),
-
           RecomendPlantCard(
             image: "assets/images/groundnuts.jpg",
             title: "Groundnuts",
             press: () {
               _groundnuts_screen(context);
             },
-
           ),
-
           RecomendPlantCard(
             image: "assets/images/sunflower.jpg",
             title: "  SunFlower",
@@ -48,16 +47,17 @@ class RecomendsPlants extends StatelessWidget {
       ),
     );
   }
+
   _maize_screen(context) async {
-    Navigator.pushReplacementNamed(context, MaizeScreen.id);
+    Navigator.pushReplacementNamed(context, MaizeRegion3.id);
   }
 
   _sunflower_screen(context) async {
-    Navigator.pushReplacementNamed(context, SunflowerScreen.id);
+    Navigator.pushReplacementNamed(context, SunFlowerRegion3.id);
   }
 
   _groundnuts_screen(context) async {
-    Navigator.pushReplacementNamed(context, GroundnutsScreen.id);
+    Navigator.pushReplacementNamed(context, GroundNutsRegion3.id);
   }
 }
 

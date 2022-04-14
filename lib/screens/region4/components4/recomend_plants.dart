@@ -3,7 +3,9 @@ import 'package:plant_app/plant _screens/maize_screen.dart';
 import 'package:plant_app/plant _screens/millet_screen.dart';
 import 'package:plant_app/plant _screens/groundnuts_screen.dart';
 import 'package:plant_app/plant _screens/sorghum_screen.dart';
-
+import 'package:plant_app/region_plants/region4/region4_maize.dart';
+import 'package:plant_app/region_plants/region4/region4_millet.dart';
+import 'package:plant_app/region_plants/region4/region4_sorghum.dart';
 
 import '../../../constants.dart';
 
@@ -18,14 +20,12 @@ class RecomendsPlants extends StatelessWidget {
       scrollDirection: Axis.vertical,
       child: Column(
         children: <Widget>[
-
           RecomendPlantCard(
             image: "assets/images/image_1.png",
             title: "Maize",
             press: () {
               _maize_screen(context);
             },
-
           ),
           RecomendPlantCard(
             image: "assets/images/sorghum.jpg",
@@ -33,9 +33,7 @@ class RecomendsPlants extends StatelessWidget {
             press: () {
               _sorghum_screen(context);
             },
-
           ),
-
           RecomendPlantCard(
             image: "assets/images/millet.jpg",
             title: "  Millet",
@@ -47,16 +45,17 @@ class RecomendsPlants extends StatelessWidget {
       ),
     );
   }
+
   _maize_screen(context) async {
-    Navigator.pushReplacementNamed(context, MaizeScreen.id);
+    Navigator.pushReplacementNamed(context, MaizeRegion4.id);
   }
 
   _millet_screen(context) async {
-    Navigator.pushReplacementNamed(context, MilletScreen.id);
+    Navigator.pushReplacementNamed(context, MilletRegion4.id);
   }
 
   _sorghum_screen(context) async {
-    Navigator.pushReplacementNamed(context, SorghumScreen.id);
+    Navigator.pushReplacementNamed(context, SorghumRegion4.id);
   }
 }
 

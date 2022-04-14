@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:plant_app/plant _screens/maize_screen.dart';
 import 'package:plant_app/plant _screens/millet_screen.dart';
+import 'package:plant_app/region_plants/region5/region5_maize.dart';
+import 'package:plant_app/region_plants/region5/region5_millet.dart';
 //import 'package:plant_app/screens/details/details_screen.dart';
 
 import '../../../constants.dart';
@@ -16,16 +18,13 @@ class RecomendsPlants extends StatelessWidget {
       scrollDirection: Axis.vertical,
       child: Column(
         children: <Widget>[
-
           RecomendPlantCard(
             image: "assets/images/image_1.png",
             title: "Maize",
             press: () {
               _maize_screen(context);
             },
-
           ),
-
           RecomendPlantCard(
             image: "assets/images/millet.jpg",
             title: "  Millet",
@@ -37,15 +36,14 @@ class RecomendsPlants extends StatelessWidget {
       ),
     );
   }
+
   _maize_screen(context) async {
-    Navigator.pushReplacementNamed(context, MaizeScreen.id);
+    Navigator.pushReplacementNamed(context, MaizeRegion5.id);
   }
 
   _millet_screen(context) async {
-    Navigator.pushReplacementNamed(context, MilletScreen.id);
+    Navigator.pushReplacementNamed(context, MilletRegion5.id);
   }
-
-
 }
 
 class RecomendPlantCard extends StatelessWidget {

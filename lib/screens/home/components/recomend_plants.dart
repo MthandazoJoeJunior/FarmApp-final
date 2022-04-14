@@ -4,6 +4,9 @@ import 'package:plant_app/plant _screens/maize_screen.dart';
 import 'package:plant_app/plant%20_screens/potatoes_screen.dart';
 import 'package:plant_app/plant _screens/potatoes_screen.dart';
 import 'package:plant_app/plant _screens/peas_screen.dart';
+import 'package:plant_app/region_plants/region1/region1_maize.dart';
+import 'package:plant_app/region_plants/region1/region1_peas.dart';
+import 'package:plant_app/region_plants/region1/region1_potato.dart';
 import 'package:plant_app/select_region/selectRegion.dart';
 //import 'package:plant_app/screens/details/details_screen.dart';
 
@@ -24,9 +27,8 @@ class RecomendsPlants extends StatelessWidget {
             image: "assets/images/image_1.png",
             title: "Maize",
             press: () {
-              _maize_screen(context);
+              _region1_maize(context);
             },
-
           ),
           RecomendPlantCard(
             image: "assets/images/image_2.png",
@@ -34,7 +36,6 @@ class RecomendsPlants extends StatelessWidget {
             press: () {
               _potatoes_screen(context);
             },
-
           ),
           RecomendPlantCard(
             image: "assets/images/image_3.png",
@@ -47,18 +48,18 @@ class RecomendsPlants extends StatelessWidget {
       ),
     );
   }
-  _maize_screen(context) async {
-    Navigator.pushReplacementNamed(context, MaizeScreen.id);
+
+  _region1_maize(context) async {
+    Navigator.pushReplacementNamed(context, MaizeRegion1.id);
   }
 
   _potatoes_screen(context) async {
-    Navigator.pushReplacementNamed(context, PotatoesScreen.id);
+    Navigator.pushReplacementNamed(context, PotatoRegion1.id);
   }
 
   _peas_screen(context) async {
-    Navigator.pushReplacementNamed(context, PeasScreen.id);
+    Navigator.pushReplacementNamed(context, PeasRegion1.id);
   }
-
 }
 
 class RecomendPlantCard extends StatelessWidget {
@@ -123,5 +124,4 @@ class RecomendPlantCard extends StatelessWidget {
       ),
     );
   }
-
 }

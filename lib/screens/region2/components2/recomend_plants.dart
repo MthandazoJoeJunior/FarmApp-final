@@ -5,6 +5,11 @@ import 'package:plant_app/plant _screens/wheat_screen.dart';
 import 'package:plant_app/plant _screens/groundnuts_screen.dart';
 import 'package:plant_app/plant _screens/sorghum_screen.dart';
 import 'package:plant_app/plant _screens/soyabeans_screen.dart';
+import 'package:plant_app/region_plants/region2/region2_groundnuts.dart';
+import 'package:plant_app/region_plants/region2/region2_maize.dart';
+import 'package:plant_app/region_plants/region2/region2_sorghum.dart';
+import 'package:plant_app/region_plants/region2/region2_soyabeans.dart';
+import 'package:plant_app/region_plants/region2/region2_wheat.dart';
 //import 'package:plant_app/screens/details/details_screen.dart';
 
 import '../../../constants.dart';
@@ -26,8 +31,6 @@ class RecomendsPlants extends StatelessWidget {
             press: () {
               _wheat_screen(context);
             },
-
-
           ),
           RecomendPlantCard(
             image: "assets/images/image_1.png",
@@ -35,8 +38,6 @@ class RecomendsPlants extends StatelessWidget {
             press: () {
               _maize_screen(context);
             },
-
-
           ),
           RecomendPlantCard(
             image: "assets/images/groundnuts.jpg",
@@ -44,7 +45,6 @@ class RecomendsPlants extends StatelessWidget {
             press: () {
               _groundnuts_screen(context);
             },
-
           ),
           RecomendPlantCard(
             image: "assets/images/sorghum.jpg",
@@ -52,8 +52,6 @@ class RecomendsPlants extends StatelessWidget {
             press: () {
               _sorghum_screen(context);
             },
-
-
           ),
           RecomendPlantCard(
             image: "assets/images/soyabeans.png",
@@ -66,24 +64,25 @@ class RecomendsPlants extends StatelessWidget {
       ),
     );
   }
+
   _maize_screen(context) async {
-    Navigator.pushReplacementNamed(context, MaizeScreen.id);
+    Navigator.pushReplacementNamed(context, MaizeRegion2.id);
   }
 
   _wheat_screen(context) async {
-    Navigator.pushReplacementNamed(context, WheatScreen.id);
+    Navigator.pushReplacementNamed(context, WheatRegion2.id);
   }
 
   _groundnuts_screen(context) async {
-    Navigator.pushReplacementNamed(context, GroundnutsScreen.id);
+    Navigator.pushReplacementNamed(context, GroundNutsRegion2.id);
   }
 
   _sorghum_screen(context) async {
-    Navigator.pushReplacementNamed(context, SorghumScreen.id);
+    Navigator.pushReplacementNamed(context, SorghumRegion2.id);
   }
 
   _soyabeans_screen(context) async {
-    Navigator.pushReplacementNamed(context, SoyabeansScreen.id);
+    Navigator.pushReplacementNamed(context, SoyaBeansRegion2.id);
   }
 }
 

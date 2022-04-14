@@ -15,7 +15,11 @@ import 'package:plant_app/plant%20_screens/wheat_screen.dart';
 import 'package:plant_app/region_plants/region1/region1_maize.dart';
 import 'package:plant_app/region_plants/region1/region1_peas.dart';
 import 'package:plant_app/region_plants/region1/region1_potato.dart';
+import 'package:plant_app/region_plants/region2/region2_groundnuts.dart';
 import 'package:plant_app/region_plants/region2/region2_maize.dart';
+import 'package:plant_app/region_plants/region2/region2_sorghum.dart';
+import 'package:plant_app/region_plants/region2/region2_soyabeans.dart';
+import 'package:plant_app/region_plants/region2/region2_wheat.dart';
 import 'package:plant_app/region_plants/region3/region3_groundnuts.dart';
 import 'package:plant_app/region_plants/region3/region3_maize.dart';
 import 'package:plant_app/region_plants/region3/region3_sugarbeans.dart';
@@ -84,6 +88,10 @@ class MyApp extends StatelessWidget {
 
         // region2
         MaizeRegion2.id: (context) => MaizeRegion2(),
+        WheatRegion2.id: (context) => WheatRegion2(),
+        GroundNutsRegion2.id: (context) => GroundNutsRegion2(),
+        SorghumRegion2.id: (context) => SorghumRegion2(),
+        SoyaBeansRegion2.id: (context) => SoyaBeansRegion2(),
 
         // region3
         MaizeRegion3.id: (context) => MaizeRegion3(),
