@@ -70,9 +70,11 @@ class _PlantDetailsState extends State<PlantDetails> {
             children: const <Widget>[
               ListTile(
                   title: Text(
-                '''Highest yields are obtained with October plantings, but these can usually only be sustained with irrigation 
-November planting with the onset of the first rains is the safest under dry land conditions.
-Planting in December will produce low yields, and is very risky, because the crop may suffer from drought stress at the end of the season''',
+                '''October plantings - Highest yields when sustained with irrigation 
+                
+November planting - onset of the first rains, safe under dry land conditions.
+
+December planting - low yields, and very risky, crop may suffer from drought stress.''',
                 style: TextStyle(
                   fontSize: 15,
                 ),
@@ -98,7 +100,18 @@ Planting in December will produce low yields, and is very risky, because the cro
             children: const <Widget>[
               ListTile(
                   title: Text(
-                'Tips',
+                ''' SC 727, 
+SC 719, 
+SC 649, 
+SC 637, 
+SC 627, 
+SC 643,
+
+For late planting use: 
+SC 513, 
+SC 529.
+
+For more information visit: https://www.seedcogroup.com/zw/farmer-s-hub/maize/region-1''',
                 style: TextStyle(
                   fontSize: 15,
                 ),
@@ -124,10 +137,18 @@ Planting in December will produce low yields, and is very risky, because the cro
             children: const <Widget>[
               ListTile(
                   title: Text(
-                '''The fertiliser requirements of maize depends on the soil fertility and yield target. Infertile soils require more fertiliser, as does a higher yield target.
-The two most important nutrients for maize are nitrogen and phosphorous.
-The first consideration for fertilising maize is manure.
-You may be guided by your regional farmer on the type of inorganic fertilizer to use.''',
+                ''' For region 1 apply -
+                
+Basal fertilizer (e.g. 7:14:7)
+Yield potential of maize: 5 to 8 t/ha  - use (250 to 350kg/ha)
+Yield potential of maize: 8 to > 12 t/ha  - use (300 to 600kg/ha)
+
+Top dressing fertilizer (high N) e.g ammonium nitrate (34.5% N)
+Yield potential of maize: 5 to 8 t/ha  - use (250 to 350kg/ha)
+Yield potential of maize: 8 to > 12 t/ha  - use (250 to 500kg/ha)
+
+Follow this link to see video of application - https://youtu.be/WkbPCUo60EQ
+''',
                 style: TextStyle(
                   fontSize: 15,
                 ),
@@ -153,8 +174,9 @@ You may be guided by your regional farmer on the type of inorganic fertilizer to
             children: const <Widget>[
               ListTile(
                   title: Text(
-                '''The crop must have a good head start ahead of weeds.
-The crop must be weed free for the first 10 weeks of the crop cycle after crop emergence.
+                '''The crop must have a good head start ahead of weeds.               
+The crop must be WEED FREE for the FIRST 10 WEEKS after crop emergence.
+
 If you fail to control weeds in maize in the first 5 weeks of the crop cycle, then 50% of the yields will be lost.''',
                 style: TextStyle(
                   fontSize: 15,
@@ -235,7 +257,8 @@ Management and Control:
             children: const <Widget>[
               ListTile(
                   title: Text(
-                'Tips',
+                '''To increase yield make sure you plant the seed sustainable for your region.
+You can contact your regional farmer ( umlimisi / mudhumeni ) for assistance. ''',
                 style: TextStyle(
                   fontSize: 15,
                 ),

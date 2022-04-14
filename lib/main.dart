@@ -30,7 +30,7 @@ import 'package:plant_app/region_plants/region4/region4_sorghum.dart';
 import 'package:plant_app/region_plants/region4/region4_sugarbeans.dart';
 import 'package:plant_app/region_plants/region5/region5_maize.dart';
 import 'package:plant_app/region_plants/region5/region5_millet.dart';
-import 'package:plant_app/region_plants/region5/region5_sunflower.dart';
+import 'package:plant_app/region_plants/region5/region5_sorghum.dart';
 import 'package:plant_app/screens/home/home_screen.dart';
 import 'package:plant_app/screens/region2/region2.dart';
 import 'package:plant_app/select_region/selectRegion.dart';
@@ -108,7 +108,7 @@ class MyApp extends StatelessWidget {
         //region5
         MaizeRegion5.id: (context) => MaizeRegion5(),
         MilletRegion5.id: (context) => MilletRegion5(),
-        SunFlowerRegion5.id: (context) => SunFlowerRegion5()
+        SorghumRegion5.id: (context) => SorghumRegion5()
       },
     );
   }

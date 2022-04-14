@@ -69,7 +69,7 @@ class _PlantDetailsState extends State<PlantDetails> {
             children: const <Widget>[
               ListTile(
                   title: Text(
-                'Maize is best planted in December',
+                ' Planting dates range from October to mid-January',
                 style: TextStyle(
                   fontSize: 15,
                 ),
@@ -95,7 +95,15 @@ class _PlantDetailsState extends State<PlantDetails> {
             children: const <Widget>[
               ListTile(
                   title: Text(
-                'type of fertilizer',
+                ''' Basal dressing :
+Compound D (200 to 300kg/Ha), Cereal Blend (150-250kg/Ha), 
+Double D (100-150kg/Ha), SSP (225kg/Ha).
+
+Top dressing:
+150-200kg/Ha of AN is enough to avoid rank growth.
+
+Apply top dressing at 2-6 weeks after emergence but before flowering after the rains/irrigation when the soil is moist
+''',
                 style: TextStyle(
                   fontSize: 15,
                 ),
@@ -121,7 +129,8 @@ class _PlantDetailsState extends State<PlantDetails> {
             children: const <Widget>[
               ListTile(
                   title: Text(
-                'weeds',
+                '''Always spray pre-emergence herbicides and pesticides (against early pests such as cutworm), 
+soon after planting (within 2 days) when the soil is moist''',
                 style: TextStyle(
                   fontSize: 15,
                 ),
