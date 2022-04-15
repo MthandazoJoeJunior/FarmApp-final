@@ -192,13 +192,7 @@ For more information on possible diseases and their management, contact regional
           ),
           ExpansionTile(
             title: const Text(
-              '''
-The harvested heads should be dried before threshing, by exposure to the sun.
-
-There are 2 types of millet:
-1. Pearl Millet / Inyawuthi / Mhunga
-2. Finger millet/Rapoko / Uphoko / Zviyo, Rukweza             
-              ''',
+              'General Tips',
               style: TextStyle(
                 fontSize: 18,
                 fontWeight: FontWeight.normal,
@@ -212,7 +206,13 @@ There are 2 types of millet:
             children: const <Widget>[
               ListTile(
                   title: Text(
-                    'Tips',
+                    '''
+The harvested heads should be dried before threshing, by exposure to the sun.
+
+There are 2 types of millet:
+1. Pearl Millet / Inyawuthi / Mhunga
+2. Finger millet/Rapoko / Uphoko / Zviyo, Rukweza             
+              ''',
                     style: TextStyle(
                       fontSize: 15,
                     ),
