@@ -156,7 +156,24 @@ soon after planting (within 2 days) when the soil is moist''',
             children: const <Widget>[
               ListTile(
                   title: Text(
-                'diseases',
+                '''1.Bean Common Mosaic Virus
+Symptoms:
+-Curled and malformed leaves that have alternate dark green and light green areas. 
+Management:
+-Use fresh seed avoid susceptible cultivars.
+
+2.Common Blight
+Symptoms:
+– large necrotic lesions surrounded by bright yellow chlorotic areas. 
+Management:
+- Avoid excessive irrigation.
+
+3.Fungal diseases
+Symptoms:
+- Sclerotinias clerotiorum,Powdery mildew, cercospora leaf spot, rust.
+Management:
+- Avoid over head irrigation and put a fungicide at first sign of disease.            
+''',
                 style: TextStyle(
                   fontSize: 15,
                 ),
@@ -182,7 +199,11 @@ soon after planting (within 2 days) when the soil is moist''',
             children: const <Widget>[
               ListTile(
                   title: Text(
-                'Tips',
+                '''- Grow on wide range of soils, but pH of between 5.3 and 6.5 is ideal.
+                
+- Requires a well prepared soil to a depth of 60-90cm
+
+- Best grown on heavier and sandy loam soils with a clay content of >20%''',
                 style: TextStyle(
                   fontSize: 15,
                 ),

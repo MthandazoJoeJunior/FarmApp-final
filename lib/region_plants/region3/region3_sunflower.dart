@@ -69,7 +69,7 @@ class _PlantDetailsState extends State<PlantDetails> {
             children: const <Widget>[
               ListTile(
                   title: Text(
-                'Maize is best planted in December',
+                'It is best to grow it after winter.',
                 style: TextStyle(
                   fontSize: 15,
                 ),
@@ -81,7 +81,7 @@ class _PlantDetailsState extends State<PlantDetails> {
           ),
           ExpansionTile(
             title: const Text(
-              'Fertilization',
+              'Seed Types',
               style: TextStyle(
                 fontSize: 18,
                 fontWeight: FontWeight.normal,
@@ -95,7 +95,9 @@ class _PlantDetailsState extends State<PlantDetails> {
             children: const <Widget>[
               ListTile(
                   title: Text(
-                'type of fertilizer',
+                '''Oil seed
+Non-oil seed                
+''',
                 style: TextStyle(
                   fontSize: 15,
                 ),
@@ -107,7 +109,7 @@ class _PlantDetailsState extends State<PlantDetails> {
           ),
           ExpansionTile(
             title: const Text(
-              'Weed Control',
+              'Climatic Requirements',
               style: TextStyle(
                 fontSize: 18,
                 fontWeight: FontWeight.normal,
@@ -121,7 +123,12 @@ class _PlantDetailsState extends State<PlantDetails> {
             children: const <Widget>[
               ListTile(
                   title: Text(
-                'weeds',
+                '''
+Sunflower strives well in climates ranging from arid under irrigation to temperate  
+under rain fed conditions.
+
+The oil seed crop sunflower is sensitive to frost.              
+                ''',
                 style: TextStyle(
                   fontSize: 15,
                 ),
@@ -131,32 +138,32 @@ class _PlantDetailsState extends State<PlantDetails> {
               setState(() => _customTileExpanded = expanded);
             },
           ),
-          ExpansionTile(
-            title: const Text(
-              'Disease Control',
-              style: TextStyle(
-                fontSize: 18,
-                fontWeight: FontWeight.normal,
-              ),
-            ),
-            trailing: Icon(
-              _customTileExpanded
-                  ? Icons.arrow_drop_down_circle
-                  : Icons.arrow_drop_down,
-            ),
-            children: const <Widget>[
-              ListTile(
-                  title: Text(
-                'diseases',
-                style: TextStyle(
-                  fontSize: 15,
-                ),
-              )),
-            ],
-            onExpansionChanged: (bool expanded) {
-              setState(() => _customTileExpanded = expanded);
-            },
-          ),
+          // ExpansionTile(
+          //   title: const Text(
+          //     'Disease Control',
+          //     style: TextStyle(
+          //       fontSize: 18,
+          //       fontWeight: FontWeight.normal,
+          //     ),
+          //   ),
+          //   trailing: Icon(
+          //     _customTileExpanded
+          //         ? Icons.arrow_drop_down_circle
+          //         : Icons.arrow_drop_down,
+          //   ),
+          //   children: const <Widget>[
+          //     ListTile(
+          //         title: Text(
+          //       'diseases',
+          //       style: TextStyle(
+          //         fontSize: 15,
+          //       ),
+          //     )),
+          //   ],
+          //   onExpansionChanged: (bool expanded) {
+          //     setState(() => _customTileExpanded = expanded);
+          //   },
+          // ),
           ExpansionTile(
             title: const Text(
               'General tips',
@@ -173,7 +180,7 @@ class _PlantDetailsState extends State<PlantDetails> {
             children: const <Widget>[
               ListTile(
                   title: Text(
-                'Tips',
+                'For more information contact AMA',
                 style: TextStyle(
                   fontSize: 15,
                 ),

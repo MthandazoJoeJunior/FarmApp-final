@@ -70,11 +70,14 @@ class _PlantDetailsState extends State<PlantDetails> {
             children: const <Widget>[
               ListTile(
                   title: Text(
-                'Maize is best planted in December',
-                style: TextStyle(
-                  fontSize: 15,
-                ),
-              )),
+                    '''
+The best time for planting is as soon as the first effective rains (when 
+there is enough moisture in the soil for seed germination) have been received                
+                ''',
+                    style: TextStyle(
+                      fontSize: 15,
+                    ),
+                  )),
             ],
             onExpansionChanged: (bool expanded) {
               setState(() => _customTileExpanded = expanded);
@@ -96,11 +99,19 @@ class _PlantDetailsState extends State<PlantDetails> {
             children: const <Widget>[
               ListTile(
                   title: Text(
-                'type of fertilizer',
-                style: TextStyle(
-                  fontSize: 15,
-                ),
-              )),
+                    '''Basal Fertilizer
+-Basal fertilizer application for optimal yields is 200 kg/ha.
+-Basal fertilizer should always be applied before planting.
+
+Top dressing
+The generally recommended top dressing (based on AN) application rate is 150 kg/ha. 
+
+In sandy soils, split application may be required, consult the regional farmer for instructions.             
+                ''',
+                    style: TextStyle(
+                      fontSize: 15,
+                    ),
+                  )),
             ],
             onExpansionChanged: (bool expanded) {
               setState(() => _customTileExpanded = expanded);
@@ -122,11 +133,16 @@ class _PlantDetailsState extends State<PlantDetails> {
             children: const <Widget>[
               ListTile(
                   title: Text(
-                'weeds',
-                style: TextStyle(
-                  fontSize: 15,
-                ),
-              )),
+                    '''
+- The first weeding should be done as soon as weeds start to emerge.
+- Use of pre-emergence herbicides like atrazine recommended in soils with greater than 25% clay content.
+
+- Young plants must be kept weed free for the first 45 days of growth.      
+                ''',
+                    style: TextStyle(
+                      fontSize: 15,
+                    ),
+                  )),
             ],
             onExpansionChanged: (bool expanded) {
               setState(() => _customTileExpanded = expanded);
@@ -148,11 +164,26 @@ class _PlantDetailsState extends State<PlantDetails> {
             children: const <Widget>[
               ListTile(
                   title: Text(
-                'diseases',
-                style: TextStyle(
-                  fontSize: 15,
-                ),
-              )),
+                    '''1. Rust
+Management:
+- -Spray crop with fungicides that are effective against the disease.
+-Rust tolerant cultivars should be grown if available
+
+2. Smut disease in pearl millet and finger millet.
+Management: 
+- Destroy affected plants by burning them or burying them outside the field.
+-Grow tolerant varieties like PMV 2, PMV 3, and Okashana 1.
+
+3. Blast
+Management:
+-Use disease tolerant varieties
+
+For more information on possible diseases and their management, contact regional farmer.
+                ''',
+                    style: TextStyle(
+                      fontSize: 15,
+                    ),
+                  )),
             ],
             onExpansionChanged: (bool expanded) {
               setState(() => _customTileExpanded = expanded);
@@ -160,7 +191,13 @@ class _PlantDetailsState extends State<PlantDetails> {
           ),
           ExpansionTile(
             title: const Text(
-              'General tips',
+              '''
+The harvested heads should be dried before threshing, by exposure to the sun.
+
+There are 2 types of millet:
+1. Pearl Millet / Inyawuthi / Mhunga
+2. Finger millet/Rapoko / Uphoko / Zviyo, Rukweza             
+              ''',
               style: TextStyle(
                 fontSize: 18,
                 fontWeight: FontWeight.normal,
@@ -174,11 +211,11 @@ class _PlantDetailsState extends State<PlantDetails> {
             children: const <Widget>[
               ListTile(
                   title: Text(
-                'Tips',
-                style: TextStyle(
-                  fontSize: 15,
-                ),
-              )),
+                    'Tips',
+                    style: TextStyle(
+                      fontSize: 15,
+                    ),
+                  )),
             ],
             onExpansionChanged: (bool expanded) {
               setState(() => _customTileExpanded = expanded);
