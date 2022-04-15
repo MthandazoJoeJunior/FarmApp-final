@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:plant_app/screens/region5/region5.dart';
 import 'package:plant_app/select_region/selectRegion.dart';
 
 class MilletRegion5 extends StatefulWidget {
@@ -231,6 +232,6 @@ There are 2 types of millet:
         ],
       ));
   _selectRegion(context) async {
-    Navigator.pushReplacementNamed(context, FormPage.id);
+    Navigator.pushReplacementNamed(context, Region5.id);
   }
 }

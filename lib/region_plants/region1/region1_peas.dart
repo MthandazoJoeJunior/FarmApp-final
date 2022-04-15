@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:plant_app/screens/home/components/recomend_plants.dart';
+import 'package:plant_app/screens/home/home_screen.dart';
 import 'package:plant_app/select_region/selectRegion.dart';
 
 class PeasRegion1 extends StatefulWidget {
@@ -237,6 +239,6 @@ For more information consult your regional farmer''',
         ],
       ));
   _selectRegion(context) async {
-    Navigator.pushReplacementNamed(context, FormPage.id);
+    Navigator.pushReplacementNamed(context, HomeScreen.id);
   }
 }

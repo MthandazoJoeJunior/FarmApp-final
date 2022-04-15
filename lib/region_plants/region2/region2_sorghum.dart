@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:plant_app/screens/region2/region2.dart';
 import 'package:plant_app/select_region/selectRegion.dart';
 
 class SorghumRegion2 extends StatefulWidget {
@@ -246,6 +247,6 @@ Harvest early to minimise bird damage.''',
         ],
       ));
   _selectRegion(context) async {
-    Navigator.pushReplacementNamed(context, FormPage.id);
+    Navigator.pushReplacementNamed(context, Region2.id);
   }
 }

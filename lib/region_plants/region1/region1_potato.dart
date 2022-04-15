@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:plant_app/screens/home/components/recomend_plants.dart';
+import 'package:plant_app/screens/home/home_screen.dart';
 import 'package:plant_app/select_region/selectRegion.dart';
 
 class PotatoRegion1 extends StatefulWidget {
@@ -260,6 +262,6 @@ Control:
         ],
       ));
   _selectRegion(context) async {
-    Navigator.pushReplacementNamed(context, FormPage.id);
+    Navigator.pushReplacementNamed(context, HomeScreen.id);
   }
 }

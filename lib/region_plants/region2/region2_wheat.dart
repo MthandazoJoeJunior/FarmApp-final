@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:plant_app/screens/region2/region2.dart';
 import 'package:plant_app/select_region/selectRegion.dart';
 
 class WheatRegion2 extends StatefulWidget {
@@ -252,6 +253,6 @@ Plan ahead: evaluate available water resources in order to calculate wheat area 
         ],
       ));
   _selectRegion(context) async {
-    Navigator.pushReplacementNamed(context, FormPage.id);
+    Navigator.pushReplacementNamed(context, Region2.id);
   }
 }

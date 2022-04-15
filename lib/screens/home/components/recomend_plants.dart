@@ -1,9 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:plant_app/plant%20_screens/maize_screen.dart';
-import 'package:plant_app/plant _screens/maize_screen.dart';
-import 'package:plant_app/plant%20_screens/potatoes_screen.dart';
-import 'package:plant_app/plant _screens/potatoes_screen.dart';
-import 'package:plant_app/plant _screens/peas_screen.dart';
 import 'package:plant_app/region_plants/region1/region1_maize.dart';
 import 'package:plant_app/region_plants/region1/region1_peas.dart';
 import 'package:plant_app/region_plants/region1/region1_potato.dart';
@@ -13,6 +8,7 @@ import 'package:plant_app/select_region/selectRegion.dart';
 import '../../../constants.dart';
 
 class RecomendsPlants extends StatelessWidget {
+  static const String id = 'RecR1';
   const RecomendsPlants({
     Key key,
   }) : super(key: key);

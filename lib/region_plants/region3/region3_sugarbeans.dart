@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:plant_app/screens/region3/region3.dart';
 import 'package:plant_app/select_region/selectRegion.dart';
 
 class SugarBeansRegion3 extends StatefulWidget {
@@ -223,6 +224,6 @@ Management:
         ],
       ));
   _selectRegion(context) async {
-    Navigator.pushReplacementNamed(context, FormPage.id);
+    Navigator.pushReplacementNamed(context, Region3.id);
   }
 }

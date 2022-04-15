@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:plant_app/screens/region3/region3.dart';
 
 class SunFlowerRegion3 extends StatefulWidget {
   static const String id = 'SunFlowerRegion3';
@@ -190,6 +191,16 @@ The oil seed crop sunflower is sensitive to frost.
               setState(() => _customTileExpanded = expanded);
             },
           ),
+          Center(
+            child: ElevatedButton(
+              style: ElevatedButton.styleFrom(primary: Colors.green),
+              child: const Text('Back'),
+              onPressed: () => {_selectRegion(context)},
+            ),
+          ),
         ],
-      ));
+          ));
+  _selectRegion(context) async {
+    Navigator.pushReplacementNamed(context, Region3.id);
+  }
 }

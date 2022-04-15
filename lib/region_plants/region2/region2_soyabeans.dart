@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:plant_app/screens/region2/region2.dart';
 import 'package:plant_app/select_region/selectRegion.dart';
 
 class SoyaBeansRegion2 extends StatefulWidget {
@@ -244,6 +245,6 @@ The crop is also sensitive to soil acidity.
         ],
       ));
   _selectRegion(context) async {
-    Navigator.pushReplacementNamed(context, FormPage.id);
+    Navigator.pushReplacementNamed(context, Region2.id);
   }
 }
