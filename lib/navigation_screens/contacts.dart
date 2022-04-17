@@ -52,6 +52,33 @@ _launchCaller() async {
   }
 }
 
+_launchCallerSeedco() async {
+  const url = "tel:+263 242 308881";
+  if (await canLaunch(url)) {
+    await launch(url);
+  } else {
+    throw 'Could not launch $url';
+  }
+}
+
+_launchCallerFC() async {
+  const url = "tel:+263 292 882871";
+  if (await canLaunch(url)) {
+    await launch(url);
+  } else {
+    throw 'Could not launch $url';
+  }
+}
+
+_launchCallerAMA() async {
+  const url = "tel:+263 242 308 662";
+  if (await canLaunch(url)) {
+    await launch(url);
+  } else {
+    throw 'Could not launch $url';
+  }
+}
+
   class ContactDetails extends StatefulWidget {
   const ContactDetails({Key key}) : super(key: key);
 
@@ -106,6 +133,54 @@ _launchCaller() async {
             ),
           ),
           subtitle: const Text('nicolafaith0@gmail.com'),
+        ),
+        SizedBox(
+          height: 25,
+        ),
+        ListTile(
+          leading: Icon(Icons.call),
+          onTap: () {
+            _launchCallerSeedco();
+            // Navigator.pop(context);
+          },
+          title: const Text(
+            'Call SeedCo',
+            style:  TextStyle(
+              fontSize: 18,
+              fontWeight: FontWeight.normal,
+            ),
+          ),
+          subtitle: const Text('+263 242 308881'),
+        ),
+        ListTile(
+          leading: Icon(Icons.call),
+          onTap: () {
+            _launchCallerFC();
+            // Navigator.pop(context);
+          },
+          title: const Text(
+            'Call Farm and City',
+            style:  TextStyle(
+              fontSize: 18,
+              fontWeight: FontWeight.normal,
+            ),
+          ),
+          subtitle: const Text('+263 292 882871'),
+        ),
+        ListTile(
+          leading: Icon(Icons.call),
+          onTap: () {
+            _launchCallerAMA();
+            // Navigator.pop(context);
+          },
+          title: const Text(
+            'Call AMA',
+            style:  TextStyle(
+              fontSize: 18,
+              fontWeight: FontWeight.normal,
+            ),
+          ),
+          subtitle: const Text('+263 242 308662'),
         ),
       ]
     )

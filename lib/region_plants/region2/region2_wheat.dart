@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:plant_app/screens/region2/region2.dart';
 import 'package:plant_app/select_region/selectRegion.dart';
 
 class WheatRegion2 extends StatefulWidget {
@@ -69,11 +70,47 @@ class _PlantDetailsState extends State<PlantDetails> {
             children: const <Widget>[
               ListTile(
                   title: Text(
-                'Maize is best planted in December',
+                'The optimum time for planting winter wheat is between mid-April and the last week of May',
                 style: TextStyle(
                   fontSize: 15,
                 ),
               )),
+            ],
+            onExpansionChanged: (bool expanded) {
+              setState(() => _customTileExpanded = expanded);
+            },
+          ),
+          ExpansionTile(
+            title: const Text(
+              'Seed Types',
+              style: TextStyle(
+                fontSize: 18,
+                fontWeight: FontWeight.normal,
+              ),
+            ),
+            // subtitle: const Text('favourable time of planting'),
+            trailing: Icon(
+              _customTileExpanded
+                  ? Icons.arrow_drop_down_circle
+                  : Icons.arrow_drop_down,
+            ),
+            children: const <Widget>[
+              ListTile(
+                  title: Text(
+                    '''SC Nduna (White seeded)*,
+SC Sekuru (Red seeded), 
+SC Smart (Red seeded), 
+SC Stallion (red seeded),
+Sky (Red seeded), 
+Select (White seeded)*,
+Serena (White seeded).
+
+*these are the reccomended as they are disease resistant.
+''',
+                    style: TextStyle(
+                      fontSize: 15,
+                    ),
+                  )),
             ],
             onExpansionChanged: (bool expanded) {
               setState(() => _customTileExpanded = expanded);
@@ -95,7 +132,14 @@ class _PlantDetailsState extends State<PlantDetails> {
             children: const <Widget>[
               ListTile(
                   title: Text(
-                'type of fertilizer',
+                '''Basal Application
+wheat requires a basal application of 300 to 500 kg/ha of a compound fertiliser (such as 7-14-7).
+
+Top Dressing.
+Apply a top dressing of 350 to 500 kg of Urea or Ammonium Nitrate per ha.
+
+For a for information consult your head regional farmer.            
+                 ''',
                 style: TextStyle(
                   fontSize: 15,
                 ),
@@ -121,7 +165,16 @@ class _PlantDetailsState extends State<PlantDetails> {
             children: const <Widget>[
               ListTile(
                   title: Text(
-                'weeds',
+                '''
+Banvel and MCPA combination covers a wide spectrum of broad leaf weeds and is recommended. 
+
+
+Farmers are advised to use some wheat specific post-emergence herbicide which should be 
+applied after a light irrigation which follows the hardening period (2 WACE-Weeks After Crop 
+Emergence).    
+
+It is important for farmers to read labels whenever they are applying herbicides.           
+                ''',
                 style: TextStyle(
                   fontSize: 15,
                 ),
@@ -147,7 +200,12 @@ class _PlantDetailsState extends State<PlantDetails> {
             children: const <Widget>[
               ListTile(
                   title: Text(
-                'diseases',
+                '''
+Diseases such as Leaf rust, Stem rust, Powdery mildew, Fusarium head blight and Take-all may cause yield reduction. 
+Farmers must seek professional advice on how to control these diseases. 
+
+Consult Agrochemical companies for more information on chemicals.            
+                ''',
                 style: TextStyle(
                   fontSize: 15,
                 ),
@@ -173,7 +231,9 @@ class _PlantDetailsState extends State<PlantDetails> {
             children: const <Widget>[
               ListTile(
                   title: Text(
-                'Tips',
+                '''
+Plan ahead: evaluate available water resources in order to calculate wheat area based on proposed gross application.
+                ''',
                 style: TextStyle(
                   fontSize: 15,
                 ),
@@ -193,6 +253,6 @@ class _PlantDetailsState extends State<PlantDetails> {
         ],
       ));
   _selectRegion(context) async {
-    Navigator.pushReplacementNamed(context, FormPage.id);
+    Navigator.pushReplacementNamed(context, Region2.id);
   }
 }

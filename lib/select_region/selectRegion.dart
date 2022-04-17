@@ -97,10 +97,14 @@ class FormPage extends StatelessWidget {
                         {
                           _home_screen(context),
                         }
-                      else if (region_value == "Region 2")
+                      else if (region_value == "egion 2A")
                         {
                           _region2(context),
                         }
+                      else if (region_value == "egion 2B")
+                          {
+                            _region2(context),
+                          }
                       else if (region_value == "Region 3")
                         {
                           _region3(context),

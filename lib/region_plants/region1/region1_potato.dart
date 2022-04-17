@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:plant_app/screens/home/components/recomend_plants.dart';
+import 'package:plant_app/screens/home/home_screen.dart';
 import 'package:plant_app/select_region/selectRegion.dart';
 
 class PotatoRegion1 extends StatefulWidget {
@@ -70,11 +72,43 @@ class _PlantDetailsState extends State<PlantDetails> {
             children: const <Widget>[
               ListTile(
                   title: Text(
-                'Maize is best planted in December',
+                ''' 
+Plant from late July to early August (late winter) after the last frost.                
+                ''',
                 style: TextStyle(
                   fontSize: 15,
                 ),
               )),
+            ],
+            onExpansionChanged: (bool expanded) {
+              setState(() => _customTileExpanded = expanded);
+            },
+          ),
+          ExpansionTile(
+            title: const Text(
+              'Seed Types',
+              style: TextStyle(
+                fontSize: 18,
+                fontWeight: FontWeight.normal,
+              ),
+            ),
+            // subtitle: const Text('favourable time of planting'),
+            trailing: Icon(
+              _customTileExpanded
+                  ? Icons.arrow_drop_down_circle
+                  : Icons.arrow_drop_down,
+            ),
+            children: const <Widget>[
+              ListTile(
+                  title: Text(
+                    '''‘1.Garnet’ late maturity (98-120 days)
+2. ‘Diamond’ early to medium maturity (14-15 weeks)
+3. ‘Monte Clare’ Late maturity (17-19 weeks)                    
+                    ''',
+                    style: TextStyle(
+                      fontSize: 15,
+                    ),
+                  )),
             ],
             onExpansionChanged: (bool expanded) {
               setState(() => _customTileExpanded = expanded);
@@ -96,7 +130,16 @@ class _PlantDetailsState extends State<PlantDetails> {
             children: const <Widget>[
               ListTile(
                   title: Text(
-                'type of fertilizer',
+                '''Basal Fertilizer
+-apply a compound balanced fertiliser at the time of planting at about 170g per square metre.
+-basal fertiliser (Compound C) or (Compound S) recommendation is about 1000kg/ha.      
+
+Top Dressing
+-Add Ammonium Nitrate (AN) at 290 kg/ha three weeks after emergence.
+-Top dress with Sulphate of Potash split into two applications first at flowering and then two weeks after flowering.
+
+*For more information contact your regional farmer or visit farmers.co.zw          
+                ''',
                 style: TextStyle(
                   fontSize: 15,
                 ),
@@ -122,7 +165,11 @@ class _PlantDetailsState extends State<PlantDetails> {
             children: const <Widget>[
               ListTile(
                   title: Text(
-                'weeds',
+                '''
+-Manually weed using hand fork or hoe.
+-Solarize your soil before planting.
+-Use pre-and post-emergence herbicides (such as Topogard, Senco) if weeds are excessive,                
+                ''',
                 style: TextStyle(
                   fontSize: 15,
                 ),
@@ -148,7 +195,24 @@ class _PlantDetailsState extends State<PlantDetails> {
             children: const <Widget>[
               ListTile(
                   title: Text(
-                'diseases',
+                '''1. Early Blight
+Control:
+-Manage water, mulch, weed.
+-Apply fungicides (Ridomil, Dithane) according to directions. 
+
+2. Late Blight 
+Control:
+-hill the rows to help prevent spores getting to the tubers
+-Remove all infected foliage at once and discard it, don’t compost it.
+
+3. Potato Scab
+Control:
+-Manage water, improve drainage, weed, mulch and don’t lime
+
+4. Leafminers
+Control:
+-weeding, rotating your crops, using pyrethrin, neem.              
+                ''',
                 style: TextStyle(
                   fontSize: 15,
                 ),
@@ -174,7 +238,11 @@ class _PlantDetailsState extends State<PlantDetails> {
             children: const <Widget>[
               ListTile(
                   title: Text(
-                'Tips',
+                '''
+-The best site for potatoes has full sun (6-8 hours of sun) and well-drained soils. 
+-Potatoes can be grown in most soil types but prefer loose, well-drained sandy soils with good aeration. 
+-Avoid heavy clay soils. Potatoes will rot in poorly drained soil or heavy clay soils.                
+                ''',
                 style: TextStyle(
                   fontSize: 15,
                 ),
@@ -194,6 +262,6 @@ class _PlantDetailsState extends State<PlantDetails> {
         ],
       ));
   _selectRegion(context) async {
-    Navigator.pushReplacementNamed(context, FormPage.id);
+    Navigator.pushReplacementNamed(context, HomeScreen.id);
   }
 }

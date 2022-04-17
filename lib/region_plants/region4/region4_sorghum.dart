@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:plant_app/screens/region4/region4.dart';
 import 'package:plant_app/select_region/selectRegion.dart';
 
 class SorghumRegion4 extends StatefulWidget {
@@ -69,11 +70,39 @@ class _PlantDetailsState extends State<PlantDetails> {
             children: const <Widget>[
               ListTile(
                   title: Text(
-                'Maize is best planted in December',
-                style: TextStyle(
-                  fontSize: 15,
-                ),
-              )),
+                    'May be planted after maize in early December',
+                    style: TextStyle(
+                      fontSize: 15,
+                    ),
+                  )),
+            ],
+            onExpansionChanged: (bool expanded) {
+              setState(() => _customTileExpanded = expanded);
+            },
+          ),
+          ExpansionTile(
+            title: const Text(
+              'Seed Types',
+              style: TextStyle(
+                fontSize: 18,
+                fontWeight: FontWeight.normal,
+              ),
+            ),
+            trailing: Icon(
+              _customTileExpanded
+                  ? Icons.arrow_drop_down_circle
+                  : Icons.arrow_drop_down,
+            ),
+            children: const <Widget>[
+              ListTile(
+                  title: Text(
+                    '''SC Smile, 
+SC Sila
+''',
+                    style: TextStyle(
+                      fontSize: 15,
+                    ),
+                  )),
             ],
             onExpansionChanged: (bool expanded) {
               setState(() => _customTileExpanded = expanded);
@@ -95,11 +124,15 @@ class _PlantDetailsState extends State<PlantDetails> {
             children: const <Widget>[
               ListTile(
                   title: Text(
-                'type of fertilizer',
-                style: TextStyle(
-                  fontSize: 15,
-                ),
-              )),
+                    '''Basal fertilizer
+Sorghum responds well to a low application of basal fertilizer (100 to 300 kg of 7.14.7 per ha)
+
+It should be followed with a top dressing of 100 to 200 kg per ha of 28 - 34% N fertilizer
+''',
+                    style: TextStyle(
+                      fontSize: 15,
+                    ),
+                  )),
             ],
             onExpansionChanged: (bool expanded) {
               setState(() => _customTileExpanded = expanded);
@@ -121,11 +154,17 @@ class _PlantDetailsState extends State<PlantDetails> {
             children: const <Widget>[
               ListTile(
                   title: Text(
-                'weeds',
-                style: TextStyle(
-                  fontSize: 15,
-                ),
-              )),
+                    '''Sorghum is very sensitive to weed competition.
+                
+ Normally 2-3 hoe-weeding regimes are done.
+ Use of pre-emergence herbicides like artrazine can be recommended in soils with greater than 25% clay content.
+ 
+ Control weeds throughout, but especially in the early stages of crop growth.
+''',
+                    style: TextStyle(
+                      fontSize: 15,
+                    ),
+                  )),
             ],
             onExpansionChanged: (bool expanded) {
               setState(() => _customTileExpanded = expanded);
@@ -147,11 +186,24 @@ class _PlantDetailsState extends State<PlantDetails> {
             children: const <Widget>[
               ListTile(
                   title: Text(
-                'diseases',
-                style: TextStyle(
-                  fontSize: 15,
-                ),
-              )),
+                    ''' 1. Leaf Blight.
+Management and Control:
+-Rotation with non-susceptible crops (non-grasses) aids in destruction of infected residue thereby reducing the level of primary infection.
+
+
+2. Downey mildew 
+Management and Control:
+- Use of Seed Co resistant varieties is the smartest control method.
+
+
+3. Smut
+Management and Control:
+- Use of Seed Co resistant varieties is the smartest control method.               
+''',
+                    style: TextStyle(
+                      fontSize: 15,
+                    ),
+                  )),
             ],
             onExpansionChanged: (bool expanded) {
               setState(() => _customTileExpanded = expanded);
@@ -173,11 +225,13 @@ class _PlantDetailsState extends State<PlantDetails> {
             children: const <Widget>[
               ListTile(
                   title: Text(
-                'Tips',
-                style: TextStyle(
-                  fontSize: 15,
-                ),
-              )),
+                    '''Employ rain harvesting techniques (pot-holing or tied-ridging).
+                
+Harvest early to minimise bird damage.''',
+                    style: TextStyle(
+                      fontSize: 15,
+                    ),
+                  )),
             ],
             onExpansionChanged: (bool expanded) {
               setState(() => _customTileExpanded = expanded);
@@ -193,6 +247,6 @@ class _PlantDetailsState extends State<PlantDetails> {
         ],
       ));
   _selectRegion(context) async {
-    Navigator.pushReplacementNamed(context, FormPage.id);
+    Navigator.pushReplacementNamed(context, Region4.id);
   }
 }

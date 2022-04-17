@@ -3,6 +3,7 @@ import 'package:plant_app/plant _screens/maize_screen.dart';
 import 'package:plant_app/plant _screens/millet_screen.dart';
 import 'package:plant_app/region_plants/region5/region5_maize.dart';
 import 'package:plant_app/region_plants/region5/region5_millet.dart';
+import 'package:plant_app/region_plants/region5/region5_sorghum.dart';
 //import 'package:plant_app/screens/details/details_screen.dart';
 
 import '../../../constants.dart';
@@ -32,6 +33,13 @@ class RecomendsPlants extends StatelessWidget {
               _millet_screen(context);
             },
           ),
+          RecomendPlantCard(
+            image: "assets/images/image_1.png",
+            title: "Sorghum",
+            press: () {
+              _sorghum_screen(context);
+            },
+          ),
         ],
       ),
     );
@@ -39,6 +47,10 @@ class RecomendsPlants extends StatelessWidget {
 
   _maize_screen(context) async {
     Navigator.pushReplacementNamed(context, MaizeRegion5.id);
+  }
+
+  _sorghum_screen(context) async {
+    Navigator.pushReplacementNamed(context, SorghumRegion5.id);
   }
 
   _millet_screen(context) async {

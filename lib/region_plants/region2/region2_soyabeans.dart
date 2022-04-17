@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:plant_app/screens/region2/region2.dart';
 import 'package:plant_app/select_region/selectRegion.dart';
 
 class SoyaBeansRegion2 extends StatefulWidget {
@@ -70,11 +71,43 @@ class _PlantDetailsState extends State<PlantDetails> {
             children: const <Widget>[
               ListTile(
                   title: Text(
-                'Maize is best planted in December',
+                'Usually planted in late November',
                 style: TextStyle(
                   fontSize: 15,
                 ),
               )),
+            ],
+            onExpansionChanged: (bool expanded) {
+              setState(() => _customTileExpanded = expanded);
+            },
+          ),
+          ExpansionTile(
+            title: const Text(
+              'Seed Types',
+              style: TextStyle(
+                fontSize: 18,
+                fontWeight: FontWeight.normal,
+              ),
+            ),
+            // subtitle: const Text('favourable time of planting'),
+            trailing: Icon(
+              _customTileExpanded
+                  ? Icons.arrow_drop_down_circle
+                  : Icons.arrow_drop_down,
+            ),
+            children: const <Widget>[
+              ListTile(
+                  title: Text(
+                    '''SC Serenade,
+SC Safari,
+SC Status,
+SC Sequel,
+SC Squire
+''',
+                    style: TextStyle(
+                      fontSize: 15,
+                    ),
+                  )),
             ],
             onExpansionChanged: (bool expanded) {
               setState(() => _customTileExpanded = expanded);
@@ -96,7 +129,11 @@ class _PlantDetailsState extends State<PlantDetails> {
             children: const <Widget>[
               ListTile(
                   title: Text(
-                'type of fertilizer',
+                '''Before Planting
+Apply a preplant application of 200 to 300 kg per ha of either a basal fertiliser (e.g. 7,14,7), Gypsum or Single Super Phosphate before planting
+
+Soyabean do not need much nitrogen in the basal fertiliser, and they do not require nitrogen fertiliser top dressing.                
+                ''',
                 style: TextStyle(
                   fontSize: 15,
                 ),
@@ -108,7 +145,7 @@ class _PlantDetailsState extends State<PlantDetails> {
           ),
           ExpansionTile(
             title: const Text(
-              'Weed Control',
+              'Pests Control',
               style: TextStyle(
                 fontSize: 18,
                 fontWeight: FontWeight.normal,
@@ -122,7 +159,11 @@ class _PlantDetailsState extends State<PlantDetails> {
             children: const <Widget>[
               ListTile(
                   title: Text(
-                'weeds',
+                '''
+Semi-looper caterpillars
+-  Insecticide spray may be required
+- Caterpillars may die natural from a virus disease
+''',
                 style: TextStyle(
                   fontSize: 15,
                 ),
@@ -148,7 +189,14 @@ class _PlantDetailsState extends State<PlantDetails> {
             children: const <Widget>[
               ListTile(
                   title: Text(
-                'diseases',
+                '''1.Frog Eye Leaf Spot
+Management:
+- use cultivars that are resistant to Frog Eye Leaf Spot.
+
+2. Rust
+Management:
+- Use Carbendazim / Flusilazole (Punch® Xtra at 350 to 500 mL/ha) and Triadimenol (Shavit® at 500 mL/ha).                
+                ''',
                 style: TextStyle(
                   fontSize: 15,
                 ),
@@ -174,7 +222,10 @@ class _PlantDetailsState extends State<PlantDetails> {
             children: const <Widget>[
               ListTile(
                   title: Text(
-                'Tips',
+                '''
+Soyabean is suited to soils with  high clay content, as they do not do very well on weak sands. 
+The crop is also sensitive to soil acidity.
+                ''',
                 style: TextStyle(
                   fontSize: 15,
                 ),
@@ -194,6 +245,6 @@ class _PlantDetailsState extends State<PlantDetails> {
         ],
       ));
   _selectRegion(context) async {
-    Navigator.pushReplacementNamed(context, FormPage.id);
+    Navigator.pushReplacementNamed(context, Region2.id);
   }
 }
