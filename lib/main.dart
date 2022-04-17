@@ -35,6 +35,7 @@ import 'package:plant_app/screens/home/home_screen.dart';
 import 'package:plant_app/screens/region2/region2.dart';
 import 'package:plant_app/select_region/selectRegion.dart';
 import 'package:plant_app/screens/region3/region3.dart';
+import 'package:plant_app/select_region/selectRegionAuto.dart';
 
 import 'screens/region4/region4.dart';
 import 'screens/region5/region5.dart';
@@ -58,8 +59,9 @@ class MyApp extends StatelessWidget {
       ),
       //home: Region5(),
 
-      initialRoute: FormPage.id,
+      initialRoute: SelectYourRegion.id,
       routes: {
+        SelectYourRegion.id: (context) => SelectYourRegion(),
         MaizeScreen.id: (context) => MaizeScreen(),
         FormPage.id: (context) => FormPage(title: "title"),
         HomeScreen.id: (context) => HomeScreen(),
