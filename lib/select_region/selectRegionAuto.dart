@@ -57,44 +57,70 @@ class _SelectYourRegionState extends State<SelectYourRegion> {
                 foregroundColor: Colors.white,
               ),
             ),
-            DropdownButton<String>(
-              value: selectedValue,
-              icon: const Icon(Icons.arrow_downward),
-              style: const TextStyle(color: Colors.deepPurple),
-              onChanged: (String newValue) {
-                //change the region you are in
-                switch (newValue) {
-                  case "Bulawayo Province":
-                    currentRegion = 1;
-                    break;
-                  case "Harare Province":
-                    currentRegion = 2;
-                    break;
+            SizedBox(height: 20),
+            Center(
+              child: SizedBox(
+                width: MediaQuery.of(context).size.width * 0.95,
+                child: DropdownButtonFormField<String>(
+                  decoration: InputDecoration(
+                    alignLabelWithHint: true,
+                    enabledBorder: OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(12),
+                        borderSide: BorderSide(width: 3, color: Colors.blue)),
+                  ),
+                  value: selectedValue,
+                  icon: const Icon(Icons.arrow_downward),
+                  style: const TextStyle(color: Colors.black),
+                  onChanged: (String newValue) {
+                    //change the region you are in
+                    switch (newValue) {
+                      case "Bulawayo Province":
+                        currentRegion = 1;
+                        break;
+                      case "Harare Province":
+                        currentRegion = 2;
+                        break;
 
-                  default:
-                    currentRegion = 0;
-                }
+                      default:
+                        currentRegion = 0;
+                    }
 
-                setState(() {
-                  selectedValue = newValue;
-                  currentRegion = currentRegion;
-                });
-              },
-              items: regions.map<DropdownMenuItem<String>>((String value) {
-                return DropdownMenuItem<String>(
-                  value: value,
-                  child: Text(value),
-                );
-              }).toList(),
+                    setState(() {
+                      selectedValue = newValue;
+                      currentRegion = currentRegion;
+                    });
+                  },
+                  items: regions.map<DropdownMenuItem<String>>((String value) {
+                    return DropdownMenuItem<String>(
+                      value: value,
+                      child: Text(
+                        value,
+                        style: TextStyle(fontSize: 20),
+                      ),
+                    );
+                  }).toList(),
+                ),
+              ),
             ),
-            Text("Your region is  $currentRegion"),
             SizedBox(height: 30),
-            CupertinoButton.filled(
-              onPressed: () {
-                log("helllo gafa");
-                log(selectedValue);
-              },
-              child: const Text('Next'),
+            Center(
+              child: Text(
+                "Your region is  $currentRegion",
+                style: TextStyle(fontSize: 30),
+              ),
+            ),
+            SizedBox(height: 30),
+            Center(
+              child: SizedBox(
+                width: MediaQuery.of(context).size.width * 0.50,
+                child: CupertinoButton.filled(
+                  onPressed: () {
+                    log("helllo gafa");
+                    log(selectedValue);
+                  },
+                  child: const Text('Next'),
+                ),
+              ),
             ),
           ],
         ),

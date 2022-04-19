@@ -11,14 +11,20 @@ import 'package:plant_app/screens/region5/region5.dart';
 import 'package:plant_app/navigation_screens/contacts.dart';
 import 'package:plant_app/navigation_screens/help_support.dart';
 
-class FormPage extends StatelessWidget {
+class FormPage extends StatefulWidget {
   FormPage({Key key, this.title}) : super(key: key);
   static const String id = 'regionSelection';
   static const String _title = 'Easy Farm';
+  final String title;
+
+  @override
+  _FormPageState createState() => _FormPageState();
+}
+
+class _FormPageState extends State<FormPage> {
   String region_value = '';
 
   final formKey = GlobalKey<FormState>();
-  final String title;
 
   Future<bool> _onWillPop(context) async {
     return (await showDialog(
@@ -49,7 +55,7 @@ class FormPage extends StatelessWidget {
           appBar: AppBar(
               backgroundColor: Colors.green,
               title: const Text(
-                _title,
+                FormPage._title,
                 style: TextStyle(
                   fontSize: 22,
                   fontWeight: FontWeight.bold,
@@ -102,9 +108,9 @@ class FormPage extends StatelessWidget {
                           _region2(context),
                         }
                       else if (region_value == "egion 2B")
-                          {
-                            _region2(context),
-                          }
+                        {
+                          _region2(context),
+                        }
                       else if (region_value == "Region 3")
                         {
                           _region3(context),
