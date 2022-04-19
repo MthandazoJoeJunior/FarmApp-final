@@ -20,17 +20,17 @@ class SelectYourRegion extends StatefulWidget {
 
 class _SelectYourRegionState extends State<SelectYourRegion> {
   String selectedValue = "My Province";
-  int currentRegion = 0;
+  String currentRegion = "";
   List<String> regions = [
     'My Province',
     'Bulawayo Province',
     'Harare Province',
-    'Manicaland Province.',
+    'Manicaland Province',
     'Mashonaland Central Province',
     'Mashonaland East Province',
     'Mashonaland West Province',
     'Masvingo Province',
-    'Matabeleland North Province.',
+    'Matabeleland North Province',
     'Matabeleland South Province',
     'Midlands Province',
   ];
@@ -108,14 +108,37 @@ class _SelectYourRegionState extends State<SelectYourRegion> {
                           //change the region you are in
                           switch (newValue) {
                             case "Bulawayo Province":
-                              currentRegion = 1;
+                              currentRegion = "4";
                               break;
                             case "Harare Province":
-                              currentRegion = 2;
+                              currentRegion = "2A";
                               break;
-
+                            case "Manicaland Province":
+                              currentRegion = "2B";
+                              break;
+                            case "Mashonaland Central Province":
+                              currentRegion = "2A";
+                              break;
+                            case "Mashonaland East Province":
+                              currentRegion = "2B";
+                              break;
+                            case "Mashonaland West Province":
+                              currentRegion = "3";
+                              break;
+                            case "Masvingo Province":
+                              currentRegion = "5";
+                              break;
+                            case "Matabeleland North Province":
+                              currentRegion = "3";
+                              break;
+                            case "Matabeleland South Province":
+                              currentRegion = "5";
+                              break;
+                            case "Midlands Province":
+                              currentRegion = "3";
+                              break;
                             default:
-                              currentRegion = 0;
+                              currentRegion = "";
                           }
 
                           setState(() {
@@ -139,7 +162,7 @@ class _SelectYourRegionState extends State<SelectYourRegion> {
                   SizedBox(height: 30),
                   Center(
                     child: Text(
-                      "Your region is  $currentRegion",
+                      "Estimate Region $currentRegion",
                       style: TextStyle(fontSize: 30),
                     ),
                   ),
@@ -149,8 +172,27 @@ class _SelectYourRegionState extends State<SelectYourRegion> {
                       width: MediaQuery.of(context).size.width * 0.50,
                       child: CupertinoButton.filled(
                         onPressed: () {
-                          log("$currentRegion");
-                          log(selectedValue);
+                          switch (currentRegion) {
+                            case "4":
+                              _region4(context);
+                              break;
+                            case "2A":
+                              _region2(context);
+                              break;
+                            case "2B":
+                              _region2(context);
+                              break;
+                            case "1":
+                              home_screen(context);
+                              break;
+                            case "3":
+                              _region3(context);
+                              break;
+                            case "5":
+                              _region5(context);
+                              break;
+                            default:
+                          }
                         },
                         child: const Text('Next'),
                       ),

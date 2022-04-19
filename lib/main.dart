@@ -63,7 +63,7 @@ class MyApp extends StatelessWidget {
       routes: {
         SelectYourRegion.id: (context) => SelectYourRegion(),
         MaizeScreen.id: (context) => MaizeScreen(),
-        FormPage.id: (context) => FormPage(title: "title"),
+        FormPage.id: (context) => SelectYourRegion(),
         HomeScreen.id: (context) => HomeScreen(),
         Region2.id: (context) => Region2(),
         Region3.id: (context) => Region3(),
