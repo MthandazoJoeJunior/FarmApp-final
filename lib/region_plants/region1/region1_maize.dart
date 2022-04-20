@@ -16,9 +16,15 @@ class _MaizeRegion1State extends State<MaizeRegion1> {
 
   static const String _title = 'Maize';
 
+  Future<bool> _onWillPop(context) async {
+    return (_selectRegion(context));
+  }
+
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
+    return new WillPopScope(
+        onWillPop: () => _onWillPop(context),
+    child: Scaffold(
       appBar: AppBar(
           backgroundColor: Colors.green,
           title: const Text(
@@ -29,7 +35,11 @@ class _MaizeRegion1State extends State<MaizeRegion1> {
             ),
           )),
       body: const PlantDetails(),
+    ),
     );
+  }
+  _selectRegion(context) async {
+    Navigator.pushReplacementNamed(context, HomeScreen.id);
   }
 }
 

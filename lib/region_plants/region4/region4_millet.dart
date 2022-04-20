@@ -15,20 +15,30 @@ class _MilletScreenState extends State<MilletRegion4> {
 
   static const String _title = 'Millet';
 
+  Future<bool> _onWillPop(context) async {
+    return (_selectRegion(context));
+  }
+
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-          backgroundColor: Colors.green,
-          title: const Text(
-            _title,
-            style: TextStyle(
-              fontSize: 22,
-              fontWeight: FontWeight.bold,
-            ),
-          )),
-      body: const PlantDetails(),
+    return new WillPopScope(
+      onWillPop: () => _onWillPop(context),
+      child: Scaffold(
+        appBar: AppBar(
+            backgroundColor: Colors.green,
+            title: const Text(
+              _title,
+              style: TextStyle(
+                fontSize: 22,
+                fontWeight: FontWeight.bold,
+              ),
+            )),
+        body: const PlantDetails(),
+      ),
     );
+  }
+  _selectRegion(context) async {
+    Navigator.pushReplacementNamed(context, Region4.id);
   }
 }
 

@@ -7,12 +7,18 @@ import 'recomend_plants.dart';
 import 'title_with_more_bbtn.dart';
 
 class Body extends StatelessWidget {
+
+  Future<bool> _onWillPop(context) async {
+    return (_selectRegion(context));
+  }
   @override
   Widget build(BuildContext context) {
     // It will provie us total height  and width of our screen
     Size size = MediaQuery.of(context).size;
     // it enable scrolling on small device
-    return SingleChildScrollView(
+    return new WillPopScope(
+      onWillPop: () => _onWillPop(context),
+    child: SingleChildScrollView(
       child:
       Column(
         crossAxisAlignment: CrossAxisAlignment.start,
@@ -33,9 +39,11 @@ class Body extends StatelessWidget {
         ],
       ),
 
+    ),
     );
   }
   _selectRegion(context) async {
     Navigator.pushReplacementNamed(context, FormPage.id);
   }
+
 }

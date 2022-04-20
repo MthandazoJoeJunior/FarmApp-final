@@ -126,7 +126,7 @@ class _SelectYourRegionState extends State<SelectYourRegion> {
                               currentRegion = "3";
                               break;
                             case "Masvingo Province":
-                              currentRegion = "5";
+                              currentRegion = "1";
                               break;
                             case "Matabeleland North Province":
                               currentRegion = "3";
