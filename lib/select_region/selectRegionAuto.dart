@@ -83,23 +83,23 @@ class _SelectYourRegionState extends State<SelectYourRegion> {
                   ),
                   Container(
                     child: CircleAvatar(
-                      radius: 150,
+                      radius: 120,
                       backgroundImage: AssetImage('assets/images/image_1.png'),
                       backgroundColor: Colors.blueGrey,
                       foregroundColor: Colors.white,
                     ),
                   ),
-                  SizedBox(height: 20),
+                  SizedBox(height: 40),
                   Center(
                     child: SizedBox(
-                      width: MediaQuery.of(context).size.width * 0.95,
+                      width: MediaQuery.of(context).size.width * 0.93,
                       child: DropdownButtonFormField<String>(
                         decoration: InputDecoration(
                           alignLabelWithHint: true,
                           enabledBorder: OutlineInputBorder(
-                              borderRadius: BorderRadius.circular(12),
+                              borderRadius: BorderRadius.circular(8),
                               borderSide:
-                                  BorderSide(width: 3, color: Colors.blue)),
+                                  BorderSide(width: 1, color: Colors.green)),
                         ),
                         value: selectedValue,
                         icon: const Icon(Icons.arrow_downward),
@@ -152,7 +152,7 @@ class _SelectYourRegionState extends State<SelectYourRegion> {
                             value: value,
                             child: Text(
                               value,
-                              style: TextStyle(fontSize: 20),
+                              style: TextStyle(fontSize: 17),
                             ),
                           );
                         }).toList(),
@@ -163,14 +163,14 @@ class _SelectYourRegionState extends State<SelectYourRegion> {
                   Center(
                     child: Text(
                       "Estimate Region $currentRegion",
-                      style: TextStyle(fontSize: 30),
+                      style: TextStyle(fontSize: 17),
                     ),
                   ),
                   SizedBox(height: 30),
                   Center(
-                    child: SizedBox(
-                      width: MediaQuery.of(context).size.width * 0.50,
-                      child: CupertinoButton.filled(
+                    child: ElevatedButton(
+                        style: ElevatedButton.styleFrom(primary: Colors.green),
+                        child: const Text('Next'),
                         onPressed: () {
                           switch (currentRegion) {
                             case "4":
@@ -193,11 +193,9 @@ class _SelectYourRegionState extends State<SelectYourRegion> {
                               break;
                             default:
                           }
-                        },
-                        child: const Text('Next'),
+                        }
                       ),
                     ),
-                  ),
                 ],
               ),
             ),
