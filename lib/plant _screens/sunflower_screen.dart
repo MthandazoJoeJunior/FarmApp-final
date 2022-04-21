@@ -49,7 +49,7 @@ class _PlantDetailsState extends State<PlantDetails> {
           Container(
             child:  CircleAvatar(
               radius: 110,
-              backgroundImage: AssetImage('assets/images/sunflower.png'),
+              backgroundImage: AssetImage('assets/images/sunflower.jpg'),
               backgroundColor: Colors.blueGrey,
               foregroundColor: Colors.white,
             ),

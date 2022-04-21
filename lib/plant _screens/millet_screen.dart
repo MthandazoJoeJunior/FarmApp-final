@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:plant_app/select_region/selectRegion.dart';
 
 
 class MilletScreen extends StatefulWidget {
@@ -185,6 +186,19 @@ class _PlantDetailsState extends State<PlantDetails> {
               setState(() => _customTileExpanded = expanded);
             },
           ),
+          Center(
+            child: ElevatedButton(
+              style: ElevatedButton.styleFrom(primary: Colors.green),
+              child: const Text('Back'),
+              onPressed: () =>{
+                _selectRegion(context)
+              },
+            ),
+          ),
         ],
       ));
+  _selectRegion(context) async {
+    Navigator.pushReplacementNamed(context, FormPage.id);
+  }
 }
+

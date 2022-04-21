@@ -1,4 +1,15 @@
 import 'package:flutter/material.dart';
+import 'package:plant_app/plant%20_screens/wheat_screen.dart';
+import 'package:plant_app/plant _screens/maize_screen.dart';
+import 'package:plant_app/plant _screens/wheat_screen.dart';
+import 'package:plant_app/plant _screens/groundnuts_screen.dart';
+import 'package:plant_app/plant _screens/sorghum_screen.dart';
+import 'package:plant_app/plant _screens/soyabeans_screen.dart';
+import 'package:plant_app/region_plants/region2/region2_groundnuts.dart';
+import 'package:plant_app/region_plants/region2/region2_maize.dart';
+import 'package:plant_app/region_plants/region2/region2_sorghum.dart';
+import 'package:plant_app/region_plants/region2/region2_soyabeans.dart';
+import 'package:plant_app/region_plants/region2/region2_wheat.dart';
 //import 'package:plant_app/screens/details/details_screen.dart';
 
 import '../../../constants.dart';
@@ -17,34 +28,61 @@ class RecomendsPlants extends StatelessWidget {
           RecomendPlantCard(
             image: "assets/images/wheat.jpg",
             title: "Wheat",
-
-
+            press: () {
+              _wheat_screen(context);
+            },
           ),
           RecomendPlantCard(
             image: "assets/images/image_1.png",
             title: "Maize",
-
-
+            press: () {
+              _maize_screen(context);
+            },
           ),
           RecomendPlantCard(
             image: "assets/images/groundnuts.jpg",
             title: "Groundnuts",
-
+            press: () {
+              _groundnuts_screen(context);
+            },
           ),
           RecomendPlantCard(
             image: "assets/images/sorghum.jpg",
             title: "Sorghum ",
-
-
+            press: () {
+              _sorghum_screen(context);
+            },
           ),
           RecomendPlantCard(
             image: "assets/images/soyabeans.png",
             title: "  Soyabeans",
-            press: () {},
+            press: () {
+              _soyabeans_screen(context);
+            },
           ),
         ],
       ),
     );
+  }
+
+  _maize_screen(context) async {
+    Navigator.pushReplacementNamed(context, MaizeRegion2.id);
+  }
+
+  _wheat_screen(context) async {
+    Navigator.pushReplacementNamed(context, WheatRegion2.id);
+  }
+
+  _groundnuts_screen(context) async {
+    Navigator.pushReplacementNamed(context, GroundNutsRegion2.id);
+  }
+
+  _sorghum_screen(context) async {
+    Navigator.pushReplacementNamed(context, SorghumRegion2.id);
+  }
+
+  _soyabeans_screen(context) async {
+    Navigator.pushReplacementNamed(context, SoyaBeansRegion2.id);
   }
 }
 

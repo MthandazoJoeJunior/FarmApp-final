@@ -1,11 +1,14 @@
 import 'package:flutter/material.dart';
-import 'package:plant_app/plant%20_screens/maize_screen.dart';
-import 'package:plant_app/plant _screens/maize_screen.dart';
+import 'package:plant_app/region_plants/region1/region1_maize.dart';
+import 'package:plant_app/region_plants/region1/region1_peas.dart';
+import 'package:plant_app/region_plants/region1/region1_potato.dart';
+import 'package:plant_app/select_region/selectRegion.dart';
 //import 'package:plant_app/screens/details/details_screen.dart';
 
 import '../../../constants.dart';
 
 class RecomendsPlants extends StatelessWidget {
+  static const String id = 'RecR1';
   const RecomendsPlants({
     Key key,
   }) : super(key: key);
@@ -20,28 +23,38 @@ class RecomendsPlants extends StatelessWidget {
             image: "assets/images/image_1.png",
             title: "Maize",
             press: () {
-              _maize_screen(context);
+              _region1_maize(context);
             },
-
           ),
           RecomendPlantCard(
             image: "assets/images/image_2.png",
             title: "Potatoes",
-
-
+            press: () {
+              _potatoes_screen(context);
+            },
           ),
           RecomendPlantCard(
             image: "assets/images/image_3.png",
             title: "Peas",
             press: () {
+              _peas_screen(context);
             },
           ),
         ],
       ),
     );
   }
-  _maize_screen(context) async {
-    Navigator.pushReplacementNamed(context, MaizeScreen.id);
+
+  _region1_maize(context) async {
+    Navigator.pushReplacementNamed(context, MaizeRegion1.id);
+  }
+
+  _potatoes_screen(context) async {
+    Navigator.pushReplacementNamed(context, PotatoRegion1.id);
+  }
+
+  _peas_screen(context) async {
+    Navigator.pushReplacementNamed(context, PeasRegion1.id);
   }
 }
 
@@ -107,5 +120,4 @@ class RecomendPlantCard extends StatelessWidget {
       ),
     );
   }
-
 }
