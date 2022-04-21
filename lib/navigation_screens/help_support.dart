@@ -12,9 +12,15 @@ class HelpSupport extends StatefulWidget {
 }
 
 class _HelpSupportState extends State<HelpSupport> {
+  Future<bool> _onWillPop(context) async {
+    return (_selectRegion(context));
+  }
+
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
+    return new WillPopScope(
+        onWillPop: () => _onWillPop(context),
+    child: Scaffold(
       appBar: AppBar(
           automaticallyImplyLeading: false,
           leadingWidth: 100,
@@ -32,6 +38,7 @@ class _HelpSupportState extends State<HelpSupport> {
           )
       ),
       body: const HelpSupportDetails(),
+    ),
     );
   }
 }
@@ -80,9 +87,9 @@ class _HelpSupportDetailsState extends State<HelpSupportDetails> {
             ),
             ExpansionTile(
               title: const Text(
-                'Question 1',
+                'Where can I get the appropriate fertilizers, seeds and agrochemicals?',
                 style:  TextStyle(
-                  fontSize: 18,
+                  fontSize: 17,
                   fontWeight: FontWeight.normal,
                 ),
               ),
@@ -94,7 +101,12 @@ class _HelpSupportDetailsState extends State<HelpSupportDetails> {
               ),
               children: const <Widget>[
                 ListTile(title: Text(
-                  'Maize is best planted in December',
+                  '''There are a number of shops that sell fertilizers, seeds and agrochemicals in Zimbabwe. Amongst them are:
+Seedco
+Farm and City
+Veterinary
+
+You can contact your regional farmer for more assistance.''',
                   style:  TextStyle(
                     fontSize: 15,
                   ),
@@ -107,9 +119,9 @@ class _HelpSupportDetailsState extends State<HelpSupportDetails> {
             ),
             ExpansionTile(
               title: const Text(
-                'Question 2',
+                'Who do I contact when I want to sell my produce?',
                 style:  TextStyle(
-                  fontSize: 18,
+                  fontSize: 17,
                   fontWeight: FontWeight.normal,
                 ),
               ),
@@ -120,7 +132,12 @@ class _HelpSupportDetailsState extends State<HelpSupportDetails> {
               ),
               children: const <Widget>[
                 ListTile(title: Text(
-                  'type of fertilizer',
+                  '''After harvesting your crops, you can sell your produce to the Grain Marketing Board. 
+You can contact them on the following numbers:
++263 24 2701870-95, 
++263 24 2701898
+
+Alternatively you can contact your regional farmer for assistance.''',
                   style:  TextStyle(
                     fontSize: 15,
                   ),
@@ -133,9 +150,9 @@ class _HelpSupportDetailsState extends State<HelpSupportDetails> {
             ),
             ExpansionTile(
               title: const Text(
-                'Question 3',
+                'Is EASY FARM Mobile Application right for me?',
                 style:  TextStyle(
-                  fontSize: 18,
+                  fontSize: 17,
                   fontWeight: FontWeight.normal,
                 ),
               ),
@@ -146,7 +163,9 @@ class _HelpSupportDetailsState extends State<HelpSupportDetails> {
               ),
               children: const <Widget>[
                 ListTile(title: Text(
-                  'weeds',
+                  '''EASY FARM Mobile Application  is a MUST Mobile App to all the youth in farming and farmers wishing to improve the quality of their produce and increasing productivity. 
+
+Talk of FARMING MADE EASY!''',
                   style:  TextStyle(
                     fontSize: 15,
                   ),

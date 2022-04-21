@@ -12,9 +12,15 @@ class Contacts extends StatefulWidget {
 }
 
 class _ContactsState extends State<Contacts> {
+  Future<bool> _onWillPop(context) async {
+    return (_selectRegion(context));
+  }
+
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
+    return new WillPopScope(
+        onWillPop: () => _onWillPop(context),
+    child: Scaffold(
         appBar: AppBar(
           automaticallyImplyLeading: false,
           leadingWidth: 100,
@@ -31,6 +37,7 @@ class _ContactsState extends State<Contacts> {
             ),
           ),
         ), body: const ContactDetails(),
+    ),
     );
   }
 }
